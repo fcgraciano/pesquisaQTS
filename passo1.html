@@ -7,7 +7,7 @@
     <title>Faça uma adição</title>
     
 </head>
-<body onload="carregamento()" >
+<body onload="carregamento('passo1')" >
     <h1>Realize uma adição</h1>
     <h2>548 + 396</h2>
     <input type="number" id="numero1" />
@@ -18,5 +18,8 @@
         Somar
     </button>
     <script src="script.js"></script>
+    <script>
+        alert(localStorage.getItem("Id_Participante"))
+    </script>
 </body>
 </html>
