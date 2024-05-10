@@ -3,7 +3,8 @@ var grupo = 1 // 1 é o Id do professor
 var Id_Participante = localStorage.getItem("Id_Participante")
 function IniciarPesquisa() {
 
-    let url = "https://localhost:7045/api/Participante";
+    //let url = "https://localhost:7045/api/Participante";https://pesquisa.fernandograciano.com.br/
+    let url = "https://pesquisa.fernandograciano.com.br/api/Participante";
     var conexao = new XMLHttpRequest();
     conexao.open("post", url);
     conexao.setRequestHeader("Content-type", "application/json");
@@ -19,7 +20,7 @@ function IniciarPesquisa() {
 
 function carregamento(passo) {
     let Id_Participante = localStorage.getItem("Id_Participante");
-    let url = "https://localhost:7045/api/Respostas";
+    let url = "https://pesquisa.fernandograciano.com.br/api/Respostas";
     let dados = `{ 
             "id_participante": "${Id_Participante}",
             "IsSaida": "false",
@@ -41,7 +42,7 @@ function carregamento(passo) {
 
 function trocarPasso(passoAtual, proximoPasso) {
 
-    let url = "https://localhost:7045/api/Respostas";
+    let url = "https://pesquisa.fernandograciano.com.br/api/Respostas";
     let dados = `{ 
         "id_participante": "${Id_Participante}",
         "IsSaida": "false",
@@ -69,7 +70,7 @@ function trocarPasso(passoAtual, proximoPasso) {
 
 function Finalizar(){
     
-    let url = "https://localhost:7045/api/Participante/Finalizar";
+    let url = "https://pesquisa.fernandograciano.com.br/api/Participante/Finalizar";
     var conexao = new XMLHttpRequest();
     conexao.open("post", url);
     conexao.setRequestHeader("Content-type", "application/json");
